@@ -1,8 +1,8 @@
 import Component from 'inferno-component'
 import { Link } from 'inferno-router'
 
-import Loading from './Loading'
-import * as client from '../api/client'
+import Loading from '../common/Loading'
+import * as client from '../../api/client'
 
 class Posts extends Component {
   state = {

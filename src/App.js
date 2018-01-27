@@ -1,20 +1,15 @@
-import { Provider } from 'inferno-redux'
 import { createStore } from 'redux'
-
-import Posts from './components/Posts'
-import Post from './components/Post'
-
+import { Provider } from 'inferno-redux'
 import { Router, Route, IndexRoute } from 'inferno-router'
 import createBrowserHistory from 'history/createBrowserHistory'
 
+import Posts from './components/Posts'
+import Post from './components/Post'
+import reduce from './reducers'
+
 const history = createBrowserHistory()
 
-function reducer(state = { count: 0 }, action) {
-  const newState = { ...state, count: state.count + 1 }
-  console.log(newState, action)
-  return newState
-}
-const store = createStore(reducer)
+const store = createStore(reduce)
 
 export default () => (
   <Provider store={store}>

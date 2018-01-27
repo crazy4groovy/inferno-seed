@@ -2,8 +2,8 @@ import Component from 'inferno-component'
 import { connect } from 'inferno-redux'
 import { Link } from 'inferno-router'
 
-import Loading from './Loading'
-import * as client from '../api/client'
+import Loading from '../common/Loading'
+import * as client from '../../api/client'
 
 class Post extends Component {
   state = {
@@ -33,7 +33,7 @@ class Post extends Component {
 }
 
 const mapStateToProps = state => ({
-  count: state.count,
+  count: state.post.count,
 })
 const mapDispatchToProps = {
   onClick: e => ({ type: 'TEST_ACTION_onClick', e }),
