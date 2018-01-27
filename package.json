@@ -14,9 +14,11 @@
     "start": "inferno-scripts start",
     "build": "inferno-scripts build",
     "test": "inferno-scripts test --env=jsdom",
-    "eject": "inferno-scripts eject"
+    "eject": "//DONT inferno-scripts eject",
+    "format": "prettier --single-quote --no-semi --write --trailing-comma es5 src/*"
   },
   "devDependencies": {
-    "inferno-devtools": "^3.10.1"
+    "inferno-devtools": "^3.10.1",
+    "prettier": "^1.10.2"
   }
 }
