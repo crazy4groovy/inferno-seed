@@ -1,4 +1,4 @@
-import { createStore } from 'redux'
+import { createStore, applyMiddleware } from 'redux'
 import { Provider } from 'inferno-redux'
 import { Router, Route, IndexRoute } from 'inferno-router'
 import createBrowserHistory from 'history/createBrowserHistory'
@@ -9,7 +9,9 @@ import reduce from './reducers'
 
 const history = createBrowserHistory({ basename: '/inferno-seed' })
 
-const store = createStore(reduce)
+// https://redux.js.org/docs/advanced/Middleware.html#seven-examples
+const middleware = applyMiddleware()
+const store = createStore(reduce, middleware)
 
 export default () => (
   <Provider store={store}>
