@@ -1,0 +1,17 @@
+ul {
+  color: darkolivegreen;
+}
+
+ul li {
+  padding: 1em;
+}
+
+h2 {
+  padding: 1em;
+  margin: 1em;
+}
+
+h2.loading {
+  border: 1px solid #ddd;
+  border-radius: 0.2em;
+}
