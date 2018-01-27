@@ -7,7 +7,7 @@ import Posts from './components/Posts'
 import Post from './components/Post'
 import reduce from './reducers'
 
-const history = createBrowserHistory()
+const history = createBrowserHistory({ basename: '/inferno-seed' })
 
 const store = createStore(reduce)
 

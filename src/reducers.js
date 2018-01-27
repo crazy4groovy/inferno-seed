@@ -1,6 +1,6 @@
 // register component reducers here
 const reducers = {
-    post: require('./components/Post/reducer').default
+  post: require('./components/Post/reducer').default,
 }
 
 export default (state, action) =>
