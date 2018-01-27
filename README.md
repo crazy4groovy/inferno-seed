@@ -1,3 +1,5 @@
+[Demo deployment](https://crazy4groovy.github.io/inferno-seed)
+
 This project was bootstrapped with [Create Inferno App](https://github.com/infernojs/create-inferno-app).
 
 Below you will find some information on how to perform common tasks.<br>
