@@ -2,6 +2,9 @@ import { createStore, applyMiddleware } from 'redux'
 import { Provider } from 'inferno-redux'
 import { Router, Route, IndexRoute } from 'inferno-router'
 import createBrowserHistory from 'history/createBrowserHistory'
+import logger from 'redux-logger'
+import reduxPromise from 'redux-promise-middleware'
+import thunk from 'redux-thunk'
 
 import Posts from './components/Posts'
 import Post from './components/Post'
@@ -10,7 +13,7 @@ import reduce from './reducers'
 const history = createBrowserHistory({ basename: '/inferno-seed' })
 
 // https://redux.js.org/docs/advanced/Middleware.html#seven-examples
-const middleware = applyMiddleware()
+const middleware = applyMiddleware(reduxPromise(), thunk, logger)
 const store = createStore(reduce, middleware)
 
 export default () => (
