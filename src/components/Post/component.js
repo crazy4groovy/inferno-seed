@@ -1,18 +1,12 @@
 import Component from 'inferno-component'
 import { Link } from 'inferno-router'
-import { object, number, func } from 'prop-types'
 
+// import { propTypes} from './propTypes'
 import Loading from '../common/Loading'
+import routes from '../../routes'
 
 class Post extends Component {
-    static propTypes = {
-        count: number.isRequired,
-        featch1: func.isRequired,
-        featch2: func.isRequired,
-        onClick: func.isRequired,
-        params: object.isRequired,
-        post: object.isRequired,
-    }
+    // static propTypes = propTypes
 
     componentDidMount() {
         this.props.fetch1(this.props.params.id)
@@ -26,7 +20,7 @@ class Post extends Component {
 
         return (
             <div>
-                <Link to="/">Home</Link>
+                <Link to={routes.home}>Home</Link>
                 <h3>Post {id} <button onClick={() => this.props.fetch1(id)}>[@action]</button></h3>
                 <button onClick={() => this.props.fetch2(id)}>[@saga]</button>
                 <h4>"{post.title}"</h4>

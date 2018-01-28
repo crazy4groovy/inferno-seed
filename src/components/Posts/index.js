@@ -3,6 +3,7 @@ import { Link } from 'inferno-router'
 
 import Loading from '../common/Loading'
 import * as client from '../../api/client'
+import { postWithId } from '../../routes'
 
 class Posts extends Component {
   state = {
@@ -26,7 +27,7 @@ class Posts extends Component {
           {this.state.posts.map(post => (
             <li key={post.id}>
               {post.title} <i>"{post.body}"</i>{' '}
-              <Link to={`/${post.id}`}>link</Link>
+              <Link to={postWithId(post.id)}>link</Link>
             </li>
           ))}
         </ul>

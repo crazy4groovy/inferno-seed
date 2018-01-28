@@ -9,6 +9,7 @@ import thunk from 'redux-thunk'
 import Posts from './components/Posts'
 import Post from './components/Post'
 import reduce from './reducers'
+import routes, { postWithId } from './routes'
 
 const history = createBrowserHistory({ basename: '/inferno-seed' })
 
@@ -21,7 +22,7 @@ export default () => (
     <Router history={history}>
       <Route>
         <IndexRoute component={Posts} />
-        <Route path="/:id" component={Post} />
+        <Route path={postWithId()} component={Post} />
       </Route>
     </Router>
   </Provider>
