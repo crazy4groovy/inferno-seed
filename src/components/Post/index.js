@@ -12,8 +12,8 @@ const mapStateToProps = state => ({
 })
 const mapDispatchToProps = {
   onClick: e => ({ type: 'TEST_ACTION_onClick', e }),
-  fetch1: actions.FetchPost,
-  fetch2: sagas.FetchPost,
+  fetch1: actions.fetchPost,
+  fetch2: sagas.fetchPost,
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Post)

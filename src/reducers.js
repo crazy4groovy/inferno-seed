@@ -1,4 +1,4 @@
-// register component reducers here
+// Register component reducers here
 const reducers = {
   post: require('./components/Post/reducer').default,
 }

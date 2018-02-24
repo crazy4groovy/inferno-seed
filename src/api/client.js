@@ -28,7 +28,7 @@ const _delayResponse = (ms = 1000) => async data => {
   return data
 }
 
-const cache = {} // note: very aggressive, no TTL!
+const cache = {} // Note: very aggressive, no TTL!
 
 const _req = uri =>
   cache[uri] ||
